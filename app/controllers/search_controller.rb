@@ -1,7 +1,6 @@
 class SearchController < ApplicationController
   def index
     @results = ChargingStationResults.new(params['location'])
-    @results.get_station
-    binding.pry
+    @results.create_station
   end
 end
